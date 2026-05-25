@@ -7,8 +7,9 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
-      - DEEPSEEK_API_BASE=https://api.deepseek.com/v1
+      - ZHIPU_API_KEY=${ZHIPU_API_KEY}
+      - LLM_API_BASE=https://open.bigmodel.cn/api/paas/v4
+      - LLM_MODEL=glm-4v-plus-0111
     volumes:
       - uploads:/app/uploads
     restart: unless-stopped
@@ -18,6 +19,7 @@ services:
     container_name: lyric-frontend
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
       - backend
     restart: unless-stopped

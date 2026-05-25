@@ -1,0 +1,5 @@
+distinguished_name = req_distinguished_name
+[req_distinguished_name]
+[req]
+distinguished_name = req_distinguished_name
+prompt = no
